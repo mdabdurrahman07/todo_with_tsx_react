@@ -1,4 +1,5 @@
 import Addtask from "./components/AddTask/Addtask";
+import AllTodos from "./components/AllTodos/AllTodos";
 
 const App = () => {
   return (
@@ -7,6 +8,7 @@ const App = () => {
    <div className="my-5">
    <Addtask></Addtask>
    </div>
+   <AllTodos></AllTodos>
     </div>
   );
 };
