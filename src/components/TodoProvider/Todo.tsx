@@ -1,4 +1,6 @@
-import { ReactNode, createContext, useState } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import { ReactNode, createContext, useContext, useState } from "react";
+
 
 export type TodoProps = {
     children: ReactNode
@@ -35,14 +37,21 @@ export type TodoContext = {
 
                 },
                 ...prev
+              
+                
             ]
+            console.log("prev value",  prev)
+            console.log("newly typed value" ,newTodo);
             return newTodo
             
 
           
         })
     }
-        return <todoContext.Provider value={{todo , handleAddTodo }}>
+        return <todoContext.Provider value={{todo , handleAddTodo}}>
             {children}
         </todoContext.Provider>
  }
+
+//  consumer hooks
+
